@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ejemplo de Django</title>
+</head>
+<body>
+    
+   <h1> Hemos creado un template </h1> 
+
+        <p style = 'color: rgb(255, 10, 10)'> 
+            mi nombre es : {{nombre}}   <!--{{xxx}} hace referencia al key del diccionario -->
+            </p>
+
+        <p style = 'color : blue'>
+            mi apellido es: {{apellido}} <!--{{xxx}} hace referencia al key del diccionario -->
+        </p>
+
+    <h2>
+        <p2 style = 'color : chocolate'>
+            este template se creo: {{hoy}}
+        </p2>
+    </h2>
+
+
+    <h3 style = 'color : forestgreen'
+        style = 'font : bold'>
+        Estas son mis notas de la facultad
+    </h3>
+        <p>
+        {% for n in notas %}
+            {% if n < 4  %}
+                <p style = "color:red"> Nota mala {{n}} </p>
+        
+            {% else %} <p style="color:blue"> Nota buena {{n}} </p>       
+            {% endif %}
+        {% endfor %} 
+        <p>
+</body>
+</html>
+
